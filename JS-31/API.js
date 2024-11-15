@@ -1,6 +1,6 @@
 const url = 'https://jsonplaceholder.typicode.com/users';
 
-fetch('https://jsonplaceholder.typicode.com/users', {
+fetch(url, {
     method: 'POST', 
     headers: {
         'content-Type': 'application/json',
@@ -11,4 +11,6 @@ fetch('https://jsonplaceholder.typicode.com/users', {
         }),
   })
   .then(response => response.json())
-  .then(data => console.log(data))
+  .then(data => {
+    document.getElementById('display').innerHTML = data.name + " " + data.email;
+    console.log(data)})
