@@ -1,4 +1,6 @@
-const url = 'https://jsonplaceholder.typicode.com/users/1';
+let i = 4;
+
+const url = 'https://jsonplaceholder.typicode.com/users/' + [i];
 const url2 = 'https://jsonplaceholder.typicode.com/users';
 const url3 = 'https://jsonplaceholder.typicode.com/users/3';
 
@@ -8,7 +10,7 @@ let text = "";
 fetch(url3)
     .then(response => response.json())
     .then(data2 => {
-        document.getElementById('get').innerHTML = data2.name + " " + data2.username + " " + data2.email + " " + data2.address.street;
+        document.getElementById('get').innerHTML = JSON.stringify(data2, null, 2);
         console.log(data2)
     })
 

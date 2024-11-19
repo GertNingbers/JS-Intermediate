@@ -1,0 +1,41 @@
+body {
+    font-family: arial, Helvetica;
+    line-height:1.5em;
+}
+#main {
+    max-width:600px;
+}
+.divA {
+    border:1px solid gray;
+    padding:7px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+#out_title {
+    color: darkred;
+    font-style: oblique;
+}
+#out_data {
+    border:1px solid navy;
+    padding:10px;
+    font-size:80%;
+    max-height:200px;
+    overflow:auto;
+}
+.txt {
+    font-size:90%;
+    font-style: italic;
+}
+ol {
+    border:1px dashed darkred;
+    border-radius: 4px;
+    padding-top:5px;
+}
+ol li {
+    margin-bottom: 10px;
+}
+
+h1, h2, h3, h4 {
+    margin:5px 0 0 0;
+}
+
