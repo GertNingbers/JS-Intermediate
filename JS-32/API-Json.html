@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
     <meta charset="UTF-8">
     <title>AJAX</title>
@@ -9,72 +10,31 @@
 
     <!-- include van jQuery library nodig voor Ajax request via jquery  -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-            crossorigin="anonymous"></script>
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
     <!-- include Axios libray voor Ajax request via Axios -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="API-json.css">
+    <link rel="stylesheet" href="API-json.css">
 </head>
 
 <body>
-    <div id="main">
-        <div class="divA">
-            <h2>Ajax requests</h2>
-            <p>Hieronder staan 4 verschillende manieren waarmee je een AJAX request uit kan voeren, in dit geval
-                om een JSON (= Javascript object) met belgische biertjes uit een API op te halen.</p>
-            <p>Daaronder wordt de JSON door Javascript ingelezen en als HTML in een div geplaatst. </p>
-            <p>Bekijk <a href="API-json.js">hier</a> hoe deze 4 methoden in Javascript gebruikt kunnen worden. </p>
-        </div>
+    <h1>Bier JSON Met API</h1>
 
-        <ol>
-            <li>Laad JSON met <button onclick="fLaadBier_plainJS()">plain Javascript</button></li>
-            <li>Laad JSON met <button onclick="fLaadBier_fetch()"  >FETCH API       </button></li>
-            <li>Laad JSON met <button onclick="fLaadBier_jQuery()" >jQuery          </button></li>
-            <li>Laad JSON met <button onclick="fLaadBier_axios()"  >Axios           </button></li>
-        </ol>
+    <ol>
+        <li>Laad JSON met <button onclick="fLaadBier_plainJS()">plain Javascript</button></li>
+        <li>Laad JSON met <button onclick="fLaadBier_fetch()">FETCH API </button></li>
+        <li>Laad JSON met <button onclick="fLaadBier_jQuery()">jQuery </button></li>
+        <li>Laad JSON met <button onclick="fLaadBier_axios()">Axios </button></li>
+    </ol>
 
-        <div class="divA">
-            <h4>Resultaat van de JSON, uitgelezen met: <span id="out_title">out_title</span></h4>
-            (zie console !)&nbsp; &nbsp; &nbsp;<button onclick="fClear()">clear</button>
-            <div id="out_data">out_data</div>
-        </div>
-
-        <div class="divA txt">
-            <h4>Wanneer welk Ajax request te gebruiken?</h4>
-            <ol>
-                <li>
-                    AJAX-requests in <b>Plain Javascript</b> worden waarschijnlijk alleen nog gebruikt door code-freaks
-                    die alles in plain Javascript willen blijven schrijven en geen libraries gebruiken.<br>
-                    Met de komst van de FETCH API die met Javascript meegeleverd wordt hoeft niet eens meer een aparte library
-                    geladen te worden.. Daarnaast is de request in Plan Javascript lastiger te schrijven en heeft
-                    veel regels nodig.<br>
-                    Waarom moeilijk doen als het makkelijker kan...
-                </li>
-                <li>
-                    AJAX-requests met de <b>FETCH API</b> van Javascript zelf zijn eenvoudig te schrijven en er is geen
-                    aparte include van een library in nodig. De FETCH API is qua gebruikersgemak erg vergelijkbaar met
-                    Axios. <br>
-                    Lees <a href="https://blog.logrocket.com/axios-or-fetch-api/" target="_blank">dit</a> artikel over
-                    de verschillen tussen de FETCH API en Axios.
-                </li>
-                <li>
-                    AJAX-requests met <b>Axios</b>  zijn eenvoudig te schrijven maar je moet wel eerst de Axios libray
-                    laden of includen. Qua gebruikersgemak erg vergelijkbaar met de FETCH API.<br>
-                    Lees <a href="https://blog.logrocket.com/axios-or-fetch-api/" target="_blank">dit</a> artikel over
-                    de verschillen tussen de FETCH API en Axios.
-                </li>
-                <li>
-                    AJAX-requests met behulp van <b>jQuery</b> lijken qua gebruikersgemak veel op de de FETCH API en Axios.<br>
-                    Voor jQuery moet je wel een library laden of includen waarvan de AJAX-requests maar een heel klein gedeelte
-                    zijn. Dus een te zware library voor alleen de AJAX-requests. Gebruik je sowieso al jQuery in de site
-                    dan zou het een logisch keus zijn om ook de AJAX-requests van jQuery te gebruiken.
-                </li>
-            </ol>
-        </div>
+    <h4>Resultaat van de JSON met: <span id="manier"></span></h4>
+    <p>Wisknop: <button onclick="fClear()">clear</button></p>
+    <h2>Biertjes:</h2>
+    <div id="output"></div>
 
 
-    </div>
+
 </body>
+
 </html>
