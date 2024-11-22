@@ -17,7 +17,7 @@ function fGetHtml(bier) {
             htmlTable += "<td>" + (i + 1) + "</td>";
             htmlTable += "<td>" + bier[i].naam + "</td>";   // haal van de array nr i van de users, het object key "name" op
             htmlTable += "<td>" + bier[i].gisting + "</td>";    // haal van de array nr i van de users, het object key "dob" (date of birth) op
-            htmlTable += "<td>" + bier[i].perc + "</td>";  // haal van de array het email adres op
+            htmlTable += "<td>" + bier[i].perc + "%</td>";  // haal van de array het email adres op
         htmlTable += "</tr>";
     }
     htmlTable += "</table>";
@@ -59,7 +59,7 @@ async function getHtmlFromUrlAsync(url) {  // is een asynchrone function (lees h
     let myJson = await fGetData(url); // ophalen van fGetData() duurt even. 
     // Om te voorkomen dat het script direct naar de volgende regel doorgaat voordat de data binnen is, zeg je dat hij moet wachten op de data met "await"
     // Als je await wil gebruiken in een function moet je deze "asynchroon" maken door voor functio, "async" te zetten
-    var userTable = "<table><tr><th>Nr</th><th>naam</th><th>Geboorte dag</th><th>Email</th></tr>";
+    var userTable = "<table><tr><th>Nr</th><th>Naam</th><th>Geboorte dag</th><th>Email</th></tr>";
     for (j=0 ; j < myJson.users.length; j++) {
         userTable += "<tr>";
         userTable += "<td>" + (j + 1) + "</td>";
@@ -76,13 +76,20 @@ async function getHtmlFromUrlAsync(url) {  // is een asynchrone function (lees h
 getHtmlFromUrl(urlBier);        
 getHtmlFromUrlAsync(url); 
 
-import axios from 'axios';
 
-// Voorbeeld van een GET-verzoek
+
 axios.get(url)
   .then(response => {
-    console.log(response.data); 
+    console.log(response);
+    let use = response.data;
+    var Axiot = "<table><tr><th>Nr</th><th>Naam</th><th>Password</th><th>Iname</th></tr>";
+    for (p=0 ; p < use.users.length; p++) {
+        Axiot += "<tr>";
+        Axiot += "<td>" + (p + 1) + "</td>";
+        Axiot += "<td>" + use.users[p].name + "</td>";
+        Axiot += "<td>" + use.users[p].password + "</td>";
+        Axiot += "<td>" + use.users[p].iname + "</td></tr>";
+    } Axiot += "</table>";
+    document.getElementById("out_table3").innerHTML = Axiot; 
   })
-  .catch(error => {
-    console.error('Er is een fout opgetreden:', error);
-  });
+
