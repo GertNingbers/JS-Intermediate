@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,11 +8,20 @@
     <title>Oefenen-API</title>
 
 </head>
+
 <body>
     <h1>Het Weer</h1>
-    <h3>Stad Naam: <input type="text" id="plaats" value="zwolle"> <button onclick="getWeer()">Zoek</button></h3>
-    
-    <div id="display"></div>
+    <h3>Stad Naam:
+        <input type="text" id="plaats" value="zwolle" spellcheck="false"> <button onclick="getStadData()">Zoek</button>
+    </h3>
+    <img src="img/wolk.png" alt="wolk en zon img" class="wolk">
+
+    <div class="tabel">
+        <img src="img/snowflakes.png" alt="sneeuwflok" class="sneeuwflok1">
+        <div id="display"></div>
+    </div>
+    <img src="img/snowflakes.png" alt="sneeuwflok" class="sneeuwflok2">
     <script src="weerAPI.js"></script>
 </body>
+
 </html>
