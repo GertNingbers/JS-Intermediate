@@ -12,13 +12,15 @@
 <body>
     <h1>Het Weer</h1>
     <h3>Stad Naam:
-        <input type="text" id="plaats" value="zwolle" spellcheck="false"> <button onclick="getStadData()">Zoek</button>
+        <input type="text" id="plaats" value="zwolle" spellcheck="false" placeholder="voer hier stad naam in."> <button onclick="getStadData()">Zoek</button><div id="foutmelding"></div>
     </h3>
     <img src="img/wolk.png" alt="wolk en zon img" class="wolk">
+    <img src="img/zon.png" alt="zon" class="zon">
 
     <div class="tabel">
         <img src="img/snowflakes.png" alt="sneeuwflok" class="sneeuwflok1">
         <div id="display"></div>
+        <img src="img/leafes.png" alt="gevallen blad" class="blad">
     </div>
     <img src="img/snowflakes.png" alt="sneeuwflok" class="sneeuwflok2">
     <script src="weerAPI.js"></script>

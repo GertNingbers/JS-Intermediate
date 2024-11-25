@@ -2,7 +2,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: cadetblue;
+    background-color: #ccebff;
 }
 h1, h3 {
     border: 1px solid darkblue;
@@ -11,7 +11,7 @@ h1, h3 {
     padding: 10px;
     border-radius: 20px;
     margin: 8px 0px 0px 0px;
-    
+ 
 }
 #display{
     padding: 10px;
@@ -45,12 +45,18 @@ table, #display{
     margin: -74px 200px 0px 0px;
 }
 .wolk{
- margin: -150px 0px 0px 900px;
+ margin: -150px 0px 0px 920px;
 }
 .sneeuwflok2{
 margin: 0px 780px 0px 0px;
 }
 .sneeuwflok1{
 margin: 570px 00px 0px 0px;
+}
+.zon{
+    margin: -200px 1080px 0px 0px;
+}
+.blad{
+    margin: 310px -200px 0px 0px;
 }
 
