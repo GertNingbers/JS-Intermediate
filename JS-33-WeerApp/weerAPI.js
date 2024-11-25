@@ -62,7 +62,6 @@ function windpijl(deg) {
 
     img.src = 'img/pijl.png';
     img.style.transform = `rotate(${deg}deg)`;
-    img.style.transition = 'transform 0.5s';
     return img.outerHTML;
 }
 
