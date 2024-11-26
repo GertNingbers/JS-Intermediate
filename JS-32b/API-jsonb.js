@@ -79,7 +79,7 @@ getHtmlFromUrlAsync(url);
 
 
 axios.get(url)
-  .then(response => {
+  .then(response => {   
     console.log(response);
     let use = response.data;
     var Axiot = "<table><tr><th>Nr</th><th>Naam</th><th>Password</th><th>Iname</th></tr>";

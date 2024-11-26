@@ -27,7 +27,7 @@ function getStadData() {
 
 
 let weerdata = "";
-async function getWeer(stad, citynaam) {
+   function getWeer(stad, citynaam) {
     weerdata = "";
     url = "https://api.openweathermap.org/data/2.5/forecast?lat=" + stad[0].lat + "&lon=" + stad[0].lon + "&appid=cd782835c208f923c3e532900c7ea7c4";
 
